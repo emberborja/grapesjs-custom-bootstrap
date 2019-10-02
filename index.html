@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>GrapesJS Plugin Boilerplate</title>
+    <title>GrapesJS Plugin Custom Bootstrap</title>
     <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+    <link href="/grapesjs-custom-bootstrap.css" rel="stylesheet">
     <script src="https://unpkg.com/grapesjs"></script>
-    <script src="dist/grapesjs-plugin-boilerplate.min.js"></script>
+    <script src="dist/grapesjs-custom-bootstrap.min.js"></script>
     <style>
       body,
       html {
@@ -32,11 +33,29 @@
         storageManager: { autoload: 0 },
         container: '#gjs',
         fromElement: true,
+        deviceManager: { devices: [] },
+        showDevices: false,
 
-        plugins: ['grapesjs-plugin-boilerplate'],
+        canvas: {
+          scripts: [
+            'https://code.jquery.com/jquery-3.2.1.min.js',
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+          ],
+          styles: [
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+          ]
+        },
+        
+        plugins: ['grapesjs-custom-bootstrap'],
         pluginsOpts: {
-          'grapesjs-plugin-boilerplate': { some: 'value' }
-        }
+          'grapesjs-custom-bootstrap': { 
+            addBasicStyle: true,
+            some: 'value',
+          }
+        },
+
+        mediaCondition: 'min-width',
+        
       });
       window.editor = editor;
     </script>
