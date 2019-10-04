@@ -3,13 +3,14 @@ import loadBlocks from './blocks/';
 import devices from './devices/';
 import panels from './panels/';
 import traits from './traits/';
+import {constants} from './constants/';
 export {constants} from './constants/';
 
 export default (editor, opts = {}) => {
   const options = { ...{
     // default options
   },  ...opts };
-  
+
   if (options.addBasicStyle) {
     editor.addComponents(`
       <style>
@@ -19,15 +20,18 @@ export default (editor, opts = {}) => {
         .gjs-dashed .dropdown-menu {
           display: block;
         }
+        body { background-color: #ddd }
       </style>
     `)
   }
 
-  // Add traits
-  traits(editor, options); 
+  editor.on('load', () => editor.addComponents(`<div class="container" style="height:100%; background-color: white;"><h1>Click the <span class="glyphicon glyphicon-question-sign"></span> button above for more info.</h1></div>`, { at: 0 }))
 
   // Add components
   loadComponents(editor, options);
+
+  // Add traits
+  traits(editor, options); 
 
   // Add blocks
   loadBlocks(editor, options);
@@ -38,6 +42,4 @@ export default (editor, opts = {}) => {
   // Add custom panels
   panels(editor);
 
-  // TODO Remove
-  editor.on('load', () => editor.addComponents(`<div style="margin:100px; padding:25px;">Content loaded from the plugin AWESOME! </div>`, { at: 1 }))
 };

@@ -1,42 +1,27 @@
 import {constants} from '../';
 
-export default (defaultModel, defaultView) => {
-    const { bsRowComponentId, bsColumnComponentId } = constants.componentIds;
-
+export default () => {
+    const { bsRowComponentId } = constants.componentIds;
     let row = {
         type: bsRowComponentId,
         methods: {
             isComponent : (el) => {
-                    if (el && el.classList && el.classList.contains('row')) {
-                        return { type: 'row' }
-                    }
-                },
+                if (el && el.classList && el.classList.contains('row')) {
+                    return { type: bsRowComponentId }
+                }
+            },
+            extend: 'default',
             model: {
                 defaults: {
                     name: 'Row',
-                    tagName: 'div',
-                    draggable: '.container, .container-fluid',
+                    draggable: '.container, .container-fluid, [class|="col"]',
                     droppable: '[class|="col"]',
-                    attributes: {
-                        class: 'row',
-                    },
-                    components: [{
-                        type: bsColumnComponentId,
-                        attributes: { class: 'col-xs-12' },
-                        components: [{
-                            tagName: 'p',
-                            type: 'text',
-                            components: [{
-                                type: 'textnode',
-                                content: 'col-xs-12'
-                            }]
-                        }]
-                    }],
-                }
+                    classes: ['row'],
+                },
             },
-            // view: {},
+            extendView: 'default',
+            view: {},
         }
     };
-
     return row;
 }

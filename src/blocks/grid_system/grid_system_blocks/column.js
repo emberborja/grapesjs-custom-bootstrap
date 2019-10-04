@@ -11,8 +11,15 @@ export default (editor, config={}) => {
             category: 'Layout',
             attributes: { class: 'fa fa-square' },
             content: {
-              type: bsColumnComponentId,
-              classes: ['col']
+                type: bsColumnComponentId,
+                components: [{
+                    tagName: 'p',
+                    type: 'text',
+                    components: [{
+                        type: 'textnode',
+                        content: 'this is a column, use settings tab',
+                    }]
+                }],
             }
         }
     }

@@ -9,22 +9,17 @@ export default () => {
       methods: {
         isComponent: (el) => {
           if (el && el.className && el.className.match(/col-(xs|sm|md|lg)-\d+/)) {
-            return { type: 'column' }
+            return { type: bsColumnComponentId }
           }
         },
+        extend: 'default',
         model: {
           defaults: {
             name: 'Column',
             draggable: '.row',
             droppable: true,
-            components: [{
-              tagName: 'p',
-              type: 'text',
-              components: [{
-                type: 'textnode',
-                content: 'this is a column, use settings tab',
-              }]
-            }],
+            editable: true,
+            classes: ['col-xs-12'],
             traits: [
               {
               type: 'select-class',
@@ -85,7 +80,8 @@ export default () => {
               }]
           }
         },
-        // view: {},
+        extendView: 'default',
+        view: {},
       }
     };
 

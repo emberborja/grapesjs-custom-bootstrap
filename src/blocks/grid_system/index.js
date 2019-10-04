@@ -5,7 +5,7 @@ export {constants} from '../';
 
 export default (editor, config={}) => {
     let grid_system_blocks = [
-        container(editor, config),
+        // container(editor, config),
         row(editor, config),
         column(editor, config),
     ];

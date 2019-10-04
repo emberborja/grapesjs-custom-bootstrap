@@ -11,18 +11,18 @@ export default (editor, config = {}) => {
         },
         {
             name: 'Small',
-            widgth: '767px',
-            opts: {widthMedia: '768'},
+            widgth: '768px',
+            // opts: {widthMedia: '768'},
         },
         {
             name: 'Medium',
-            widgth: '991px',
-            opts: {widthMedia: '992'},
+            widgth: '992px',
+            // opts: {widthMedia: '992'},
         },
         {
             name: 'Large',
-            widgth: '1199px',
-            opts: {widthMedia: '1200'},
+            widgth: '1200px',
+            // opts: {widthMedia: '1200'},
         },
         {
             name: 'Extra Large',

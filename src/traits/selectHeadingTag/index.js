@@ -1,7 +1,7 @@
 export default function (editor, config = {}) {
     const trm = editor.TraitManager
   
-    trm.addType('select-class', {
+    trm.addType('select-heading-tag', {
       // Expects as return a simple HTML string or an HTML element
       events: {
         'change': 'onChange'
