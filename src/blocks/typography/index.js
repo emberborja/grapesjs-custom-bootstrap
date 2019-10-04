@@ -1,9 +1,11 @@
-import headings from './typography_blocks/headings';
+import heading from './typography_blocks/heading';
+import paragraph from './typography_blocks/paragraph';
 export {constants} from '../';
 
 export default (editor, config={}) => {
     let typography_blocks = [
-        headings(editor, config),
+        heading(editor, config),
+        paragraph(editor, config),
     ];
     
     return typography_blocks;

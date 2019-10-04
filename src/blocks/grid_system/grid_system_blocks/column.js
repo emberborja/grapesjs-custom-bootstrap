@@ -1,17 +1,16 @@
 import {constants} from '../';
+const blockId = constants.blocks.gridsystem.column.id;
+const { column } = constants.components.gridsystem;
 
 export default (editor, config={}) => {
-    const { bsColumnBlockId } = constants.blockIds;
-    const { bsColumnComponentId } = constants.componentIds;
-    
-    let column = {
-        id: bsColumnBlockId,
+    let column_block = {
+        id: blockId,
         opts: {
             label: 'Column',
             category: 'Layout',
             attributes: { class: 'fa fa-square' },
             content: {
-                type: bsColumnComponentId,
+                type: column.id,
                 components: [{
                     tagName: 'p',
                     type: 'text',
@@ -23,6 +22,5 @@ export default (editor, config={}) => {
             }
         }
     }
-
-    return column;
+    return column_block;
 }

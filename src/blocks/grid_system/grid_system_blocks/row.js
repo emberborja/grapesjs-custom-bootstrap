@@ -1,18 +1,18 @@
 import {constants} from '../';
+const blockId = constants.blocks.gridsystem.row.id;
+const { row, column } = constants.components.gridsystem;
 
 export default (editor, config={}) => {
-    const { bsRowBlockId } = constants.blockIds;
-    const { bsRowComponentId, bsColumnComponentId } = constants.componentIds;
-    let row = {
-        id: bsRowBlockId,
+    let row_block = {
+        id: blockId,
         opts: {
             label: 'Row',
             category: 'Layout',
             attributes: { class: 'fa fa-minus' },
             content: {
-                type: bsRowComponentId,
+                type: row.id,
                 components: {
-                    type: bsColumnComponentId,
+                    type: column.id,
                     components: [{
                         tagName: 'p',
                         type: 'text',
@@ -25,5 +25,5 @@ export default (editor, config={}) => {
             }
         }
     }
-    return row;
+    return row_block;
 }

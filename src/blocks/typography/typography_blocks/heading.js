@@ -1,16 +1,16 @@
 import {constants} from '../';
+const blockId = constants.blocks.typography.heading.id;
+const { heading } = constants.components.typography;
 
 export default (editor, config={}) => {
-    const { bsHeadingBlockId } = constants.blockIds;
-    const { bsHeadingComponentId } = constants.componentIds;
-    let column = {
-        id: bsHeadingBlockId,
+    let heading_block = {
+        id: blockId,
         opts: {
             label: 'Heading',
             category: 'Typography',
-            attributes: { class: "fa fa-heading" },
+            attributes: { class: "fa fa-header" },
             content: {
-                type: bsHeadingComponentId,
+                type: heading.id,
                     components: [{
                         type: 'textnode',
                         content: 'this is a heading, use traits tab',
@@ -18,5 +18,5 @@ export default (editor, config={}) => {
             }
         }
     }
-    return column;
+    return heading_block;
 }

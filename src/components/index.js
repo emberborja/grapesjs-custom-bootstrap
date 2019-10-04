@@ -1,7 +1,8 @@
 import column from './grid_system/column';
 import container from './grid_system/container';
 import row from './grid_system/row';
-import headings from './typography/headings';
+import heading from './typography/heading';
+import paragraph from './typography/paragraph';
 export {constants} from '../';
 
 export default (editor, config = {}) => {
@@ -14,7 +15,8 @@ export default (editor, config = {}) => {
         column(), 
         container(), 
         row(),
-        headings(),
+        heading(),
+        paragraph(),
     ];
     
     componentList.forEach(component => domc.addType(component.type, component.methods));

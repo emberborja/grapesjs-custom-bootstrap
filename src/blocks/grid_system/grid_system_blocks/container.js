@@ -1,20 +1,20 @@
 import {constants} from '../';
+const blockId = constants.blocks.gridsystem.container.id;
+const { container, row, column } = constants.components.gridsystem;
 
 export default (editor, config={}) => {
-    const { bsContainerBlockId } = constants.blockIds;
-    const { bsContainerComponentId, bsRowComponentId, bsColumnComponentId } = constants.componentIds;
-    let container = {
-        id: bsContainerBlockId,
+    let container_block = {
+        id: blockId,
         opts: {
             label: 'Container',
             category: 'Layout',
             attributes: { class: 'fa fa-square-o' },
             content: {
-                type: bsContainerComponentId,
+                type: container.id,
                 components: [{
-                        type: bsRowComponentId,
+                        type: row.id,
                         components: [{
-                            type: bsColumnComponentId,
+                            type: column.id,
                             components: [{
                                 tagName: 'h1',
                                 type: 'text',
@@ -36,5 +36,5 @@ export default (editor, config={}) => {
             }
         }
     }
-    return container;
+    return container_block;
 }

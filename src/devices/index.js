@@ -2,31 +2,31 @@ export default (editor, config = {}) => {
     const deviceManager = editor.DeviceManager;
     deviceManager.devices = [];
 
-    const addDevice = device => deviceManager.add(device.name, device.widgth, device.opts);
+    const addDevice = device => deviceManager.add(device.name, device.width, device.opts);
     const deviceList = [
         {
             name: 'Extra Small',
-            widgth: '575px',
+            width: '575px',
             opts: {},
         },
         {
             name: 'Small',
-            widgth: '768px',
+            width: '768px',
             // opts: {widthMedia: '768'},
         },
         {
             name: 'Medium',
-            widgth: '992px',
+            width: '992px',
             // opts: {widthMedia: '992'},
         },
         {
             name: 'Large',
-            widgth: '1200px',
+            width: '1200px',
             // opts: {widthMedia: '1200'},
         },
         {
             name: 'Extra Large',
-            widgth: '100%',
+            width: '100%',
             opts: {},
         },
     ];
