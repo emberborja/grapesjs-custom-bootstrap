@@ -4,11 +4,10 @@ import devices from './devices/';
 import panels from './panels/';
 import traits from './traits/';
 import {constants} from './constants/';
-export {constants} from './constants/';
 
 export default (editor, opts = {}) => {
   const options = { ...{
-    // default options
+    constants
   },  ...opts };
 
   if (options.addBasicStyle) {

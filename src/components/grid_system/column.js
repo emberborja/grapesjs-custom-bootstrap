@@ -1,15 +1,13 @@
-import {constants} from '../';
-
-export default () => {
-    const { bsColumnComponentId } = constants.componentIds;
+export default (config) => {
+    const columnComponentId = config.constants.components.gridsystem.column.id;
     let cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
     let column = {
-      type: bsColumnComponentId,
+      type: columnComponentId,
       methods: {
         isComponent: (el) => {
           if (el && el.className && el.className.match(/col-(xs|sm|md|lg)-\d+/)) {
-            return { type: bsColumnComponentId }
+            return { type: columnComponentId }
           }
         },
         extend: 'default',

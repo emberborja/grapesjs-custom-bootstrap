@@ -1,14 +1,12 @@
-import {constants} from '../';
-
-export default () => {
-    const { bsHeadingComponentId } = constants.componentIds;
-    const headingTypes = ['H1', 'H2', 'H3',  'H4',  'H5',  'H6',];
+export default (config) => {
+    const headingComponent = config.constants.components.typography.heading;
+    const headingTypes = headingComponent.tags;
     let heading = {
-        type: bsHeadingComponentId,
+        type: headingComponent.id,
         methods: {
             isComponent: (el) => {
                 if (el && el.tagName && headingTypes.includes(el.tagName)) {
-                    return { type: bsHeadingComponentId }
+                    return { type: headingComponent.id }
                 }
             },
             extend: 'text',

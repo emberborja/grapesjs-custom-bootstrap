@@ -1,13 +1,11 @@
-import {constants} from '../';
-
-export default () => {
-    const { bsContainerComponentId } = constants.componentIds;
+export default (config) => {
+    const containerComponentId = config.constants.components.gridsystem.container.id;
     let container = {
-        type: bsContainerComponentId,
+        type: containerComponentId,
         methods: {
             isComponent: (el) => {
                 if (el && el.classList && (el.classList.contains('container') || el.classList.contains('container-fluid'))) {
-                    return { type: bsContainerComponentId }
+                    return { type: containerComponentId }
                 }
             },
             extend: 'default',

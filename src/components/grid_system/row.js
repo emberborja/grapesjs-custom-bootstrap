@@ -1,13 +1,11 @@
-import {constants} from '../';
-
-export default () => {
-    const { bsRowComponentId } = constants.componentIds;
+export default (config) => {
+    const rowComponentId = config.constants.components.gridsystem.row.id;
     let row = {
-        type: bsRowComponentId,
+        type: rowComponentId,
         methods: {
             isComponent : (el) => {
                 if (el && el.classList && el.classList.contains('row')) {
-                    return { type: bsRowComponentId }
+                    return { type: rowComponentId }
                 }
             },
             extend: 'default',

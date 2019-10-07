@@ -1,29 +1,25 @@
-import {constants} from '../';
-
-export default () => {
-    const { bsParagraphComponentId } = constants.componentIds;
-    // const { } = constants;
-    const headingTypes = ['H1', 'H2', 'H3',  'H4',  'H5',  'H6',];
-    let heading = {
-        type: bsHeadingComponentId,
+export default (config) => {
+    const paragraphComponent = config.constants.components.typography.paragraph;
+    let paragraph = {
+        type: paragraphComponent.id,
         methods: {
             isComponent: (el) => {
-                if (el && el.tagName && headingTypes.includes(el.tagName)) {
-                    return { type: bsHeadingComponentId }
+                if (el && el.tagName && (el.tagName === 'P' || el.tagName === 'p' )) {
+                    return { type: paragraphComponent.id }
                 }
             },
             extend: 'text',
             model: {
                 defaults: {
-                    tagName: 'H1',
-                    name: 'Heading',
+                    tagName: 'P',
+                    name: 'Text',
                     draggable: '[class|="col"]',
                     traits:[{
                         type: 'select',
-                        label: 'Heading Type',
-                        name: 'tagName',
+                        label: 'Helper Classes',
+                        name: 'class',
                         changeProp: 1,
-                        options: headingTypes.map(type => { return {id: type, name: type} } )
+                        options: paragraphComponent.classes.map( bootstrap_class => { return {id: bootstrap_class, name: bootstrap_class} } )
                     }]
                 },
             },
@@ -31,5 +27,5 @@ export default () => {
             view: {},
         }
     }
-    return heading;
+    return paragraph;
 }

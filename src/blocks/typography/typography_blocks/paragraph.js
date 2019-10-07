@@ -1,8 +1,6 @@
-import {constants} from '../';
-const blockId = constants.blocks.typography.paragraph.id;
-const { paragraph } = constants.components.typography;
-
-export default (editor, config={}) => {
+export default (editor, config) => {
+    const blockId = config.constants.blocks.typography.paragraph.id;
+    const { paragraph } = config.constants.components.typography;
     let paragraph_block = {
         id: blockId,
         opts: {

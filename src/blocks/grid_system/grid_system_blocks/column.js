@@ -1,8 +1,6 @@
-import {constants} from '../';
-const blockId = constants.blocks.gridsystem.column.id;
-const { column } = constants.components.gridsystem;
-
-export default (editor, config={}) => {
+export default (editor, config) => {
+    const blockId = config.constants.blocks.gridsystem.column.id;
+    const { column } = config.constants.components.gridsystem;
     let column_block = {
         id: blockId,
         opts: {

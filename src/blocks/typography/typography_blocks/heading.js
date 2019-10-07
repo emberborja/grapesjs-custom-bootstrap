@@ -1,8 +1,6 @@
-import {constants} from '../';
-const blockId = constants.blocks.typography.heading.id;
-const { heading } = constants.components.typography;
-
-export default (editor, config={}) => {
+export default (editor, config) => {
+    const blockId = config.constants.blocks.typography.heading.id;
+    const { heading } = config.constants.components.typography;
     let heading_block = {
         id: blockId,
         opts: {

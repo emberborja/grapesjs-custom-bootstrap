@@ -1,8 +1,8 @@
-import { bootStrap3 } from './bootstrap3';
+import { bootStrap3 } from './bootstrap3/bootstrap3';
 // TODO blockIds
 // TODO componentIds
 
-const blocks = {
+let blocks = {
     gridsystem: { 
         container: {id: 'container_block'},
         row: { id: 'row_block'},
@@ -14,7 +14,7 @@ const blocks = {
     },
 }
 
-const components = {
+let components = {
     gridsystem: { 
         container: {id: 'container_component'},
         row: { id: 'row_component'},
@@ -37,7 +37,11 @@ const components = {
     },
 }
 
-export const constants = {
+const constants = {
     blocks: blocks,
     components: components,
-};
+}; 
+
+console.log(constants);
+
+export { constants };
