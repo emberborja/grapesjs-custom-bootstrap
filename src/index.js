@@ -26,6 +26,8 @@ export default (editor, opts = {}) => {
 
   editor.on('load', () => editor.addComponents(`<div class="container" style="height:100%; background-color: white;"><h1>Click the <span class="glyphicon glyphicon-question-sign"></span> button above for more info.</h1></div>`, { at: 0 }))
 
+  // TODO add the inline tags for body copy to the editor toolbar, including abbreviation component
+
   // Add components
   loadComponents(editor, options);
 

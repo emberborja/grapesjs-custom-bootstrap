@@ -15,6 +15,7 @@ export const constants = {
             heading: { id: 'heading_block'},
             paragraph: { id: 'paragraph_block'},
             abbreviation: { id: 'abbvreviation_block' },
+            address: { id: 'address_block'},
         },
 
     },
@@ -36,7 +37,7 @@ export const constants = {
 
             paragraph: { 
                 id: 'paragraph_component',
-                tags: ['p'],
+                tags: ['P'],
                 classes: [
                     ...bootStrap3.typography.bodycopy.classes,
                     ...bootStrap3.typography.alignment.classes,
@@ -46,9 +47,14 @@ export const constants = {
 
             abbreviation: {
                 id: 'abbreviation_component',
-                tags: 'abbr',
+                tags: 'ABBR',
                 classes: ['initialism'],
                 attributes: ['title'],
+            },
+
+            address: {
+                id: 'address_component',
+                tags: 'address',
             }
 
         },

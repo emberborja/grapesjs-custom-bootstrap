@@ -1,6 +1,7 @@
 import heading from './typography_components/heading';
 import paragraph from './typography_components/paragraph';
 import abbreviation from './typography_components/abbreviation';
+import address from './typography_components/address';
 
 export default (config) => {
     
@@ -8,6 +9,7 @@ export default (config) => {
         heading(config),
         paragraph(config),
         abbreviation(config),
+        address(config),
     ];
 
     return typography_components;

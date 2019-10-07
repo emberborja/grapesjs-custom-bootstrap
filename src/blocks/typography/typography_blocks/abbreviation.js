@@ -11,7 +11,7 @@ export default (editor, config) => {
                 type: abbreviation.id,
                     components: [{
                         type: 'textnode',
-                        content: 'This is an abbreviation; use the traits tab to add the full definition that will appear on hover.',
+                        content: 'HTML',
                     }]
             }
         }

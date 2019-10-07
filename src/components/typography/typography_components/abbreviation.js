@@ -4,8 +4,8 @@ export default (config) => {
         type: abbreviationComponent.id,
         methods: {
             isComponent: (el) => {
-                if (el && el.tagName && (el.tagName === 'P' || el.tagName === 'p' )) {
-                    return { type: Component.id }
+                if (el && el.tagName && el.tagName === abbreviationComponent.tags) {
+                    return { type: abbreviationComponent.id }
                 }
             },
             extend: 'text',
@@ -13,7 +13,9 @@ export default (config) => {
                 defaults: {
                     tagName: abbreviationComponent.tags,
                     name: 'Abbreviation',
-                    draggable: 'p',
+                    draggable: '[class|="col"]',
+                    attributes: { title: 'HyperText Markup Language'},
+                    classes: ['initialism'],
                     traits:[
                         'id',
                         'title',
