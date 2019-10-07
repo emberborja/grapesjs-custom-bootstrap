@@ -4,6 +4,7 @@ import abbreviation from './typography_components/abbreviation';
 import address from './typography_components/address';
 import blockquote from './typography_components/bockquote';
 import list from './typography_components/list';
+import descriptionlist from './typography_components/descriptionlist';
 
 export default (config) => {
     
@@ -14,6 +15,7 @@ export default (config) => {
         address(config),
         blockquote(config),
         list(config),
+        descriptionlist(config),
     ];
 
     return typography_components;

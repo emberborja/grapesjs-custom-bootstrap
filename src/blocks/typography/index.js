@@ -4,6 +4,7 @@ import abbreviation from './typography_blocks/abbreviation';
 import address from './typography_blocks/address';
 import blockquote from './typography_blocks/blockquote';
 import list from './typography_blocks/list';
+import descriptionlist from './typography_blocks/descriptionlist';
 
 export default (editor, config) => {
     let typography_blocks = [
@@ -13,6 +14,7 @@ export default (editor, config) => {
         address(editor, config),
         blockquote(editor, config),
         list(editor, config),
+        descriptionlist(editor, config),
     ];
     
     return typography_blocks;

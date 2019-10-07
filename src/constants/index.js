@@ -18,6 +18,7 @@ export const constants = {
             address: { id: 'address_block' },
             blockquote: { id: 'blockquote_block' },
             list: { id: 'list_block' },
+            descriptionlist: { id: 'descriptionlist_block' },
         },
 
     },
@@ -70,6 +71,12 @@ export const constants = {
                 tags: ['UL', 'OL'],
                 classes: bootStrap3.typography.lists.classes,
             },
+
+            descriptionlist: {
+                id: 'descriptionlist_component',
+                tags: 'DL',
+                classes: ['dl-horizontal'],
+            }
 
         },
     },
