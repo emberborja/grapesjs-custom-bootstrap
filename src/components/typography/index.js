@@ -3,6 +3,7 @@ import paragraph from './typography_components/paragraph';
 import abbreviation from './typography_components/abbreviation';
 import address from './typography_components/address';
 import blockquote from './typography_components/bockquote';
+import list from './typography_components/list';
 
 export default (config) => {
     
@@ -12,6 +13,7 @@ export default (config) => {
         abbreviation(config),
         address(config),
         blockquote(config),
+        list(config),
     ];
 
     return typography_components;

@@ -64,7 +64,7 @@ export const bootStrap3 = {
             classes: ['blockquote-reverse'],
         },
         lists: {
-            tags: ['ul', 'ol', 'li'],
+            tags: ['UL', 'OL', 'LI'],
             classes: ['list-unstyled', 'list-inline'],
         },
         descriptionLists: {

@@ -17,6 +17,7 @@ export const constants = {
             abbreviation: { id: 'abbvreviation_block' },
             address: { id: 'address_block' },
             blockquote: { id: 'blockquote_block' },
+            list: { id: 'list_block' },
         },
 
     },
@@ -62,7 +63,13 @@ export const constants = {
                 id: 'blockquote_component', 
                 tags: 'BLOCKQUOTE',
                 classes: bootStrap3.typography.blockquotes.classes,
-            }
+            },
+
+            list: {
+                id: 'list_component',
+                tags: ['UL', 'OL'],
+                classes: bootStrap3.typography.lists.classes,
+            },
 
         },
     },
