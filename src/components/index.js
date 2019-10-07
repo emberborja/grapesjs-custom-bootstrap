@@ -9,7 +9,7 @@ export default (editor, config) => {
     const defaultType = domc.getType('default');
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
-    console.log('components index', config);    
+    
     const componentList = [
         column(config), 
         container(config), 
@@ -19,5 +19,6 @@ export default (editor, config) => {
     ];
     
     componentList.forEach(component => domc.addType(component.type, component.methods));
+    
   }
   
