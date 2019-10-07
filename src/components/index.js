@@ -1,8 +1,5 @@
-import column from './grid_system/column';
-import container from './grid_system/container';
-import row from './grid_system/row';
-import heading from './typography/heading';
-import paragraph from './typography/paragraph';
+import grid_system_components from './grid_system/';
+import typography_components from './typography/';
 
 export default (editor, config) => {
     const domc = editor.DomComponents;
@@ -11,11 +8,8 @@ export default (editor, config) => {
     const defaultView = defaultType.view;
     
     const componentList = [
-        column(config), 
-        container(config), 
-        row(config),
-        heading(config),
-        paragraph(config),
+        ...grid_system_components(config),
+        ...typography_components(config),
     ];
     
     componentList.forEach(component => domc.addType(component.type, component.methods));

@@ -46,11 +46,11 @@ export const constants = {
 
             abbreviation: {
                 id: 'abbreviation_component',
-                tags: ['abbr'],
+                tags: 'abbr',
                 classes: ['initialism'],
                 attributes: ['title'],
             }
-            
+
         },
     },
 
