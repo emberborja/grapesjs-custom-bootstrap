@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-custom-bootstrap",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "GrapesJS Plugin Custom for Bootstrap 3.3.7",
   "main": "dist/grapesjs-custom-bootstrap.min.js",
   "scripts": {
