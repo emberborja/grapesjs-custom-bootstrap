@@ -2,6 +2,7 @@ import heading from './typography_blocks/heading';
 import paragraph from './typography_blocks/paragraph';
 import abbreviation from './typography_blocks/abbreviation';
 import address from './typography_blocks/address';
+import blockquote from './typography_blocks/blockquote';
 
 export default (editor, config) => {
     let typography_blocks = [
@@ -9,6 +10,7 @@ export default (editor, config) => {
         paragraph(editor, config),
         // abbreviation(editor, config),
         address(editor, config),
+        blockquote(editor, config),
     ];
     
     return typography_blocks;

@@ -15,7 +15,8 @@ export const constants = {
             heading: { id: 'heading_block'},
             paragraph: { id: 'paragraph_block'},
             abbreviation: { id: 'abbvreviation_block' },
-            address: { id: 'address_block'},
+            address: { id: 'address_block' },
+            blockquote: { id: 'blockquote_block' },
         },
 
     },
@@ -55,6 +56,12 @@ export const constants = {
             address: {
                 id: 'address_component',
                 tags: 'address',
+            },
+
+            blockquote: {
+                id: 'blockquote_component', 
+                tags: 'BLOCKQUOTE',
+                classes: bootStrap3.typography.blockquotes.classes,
             }
 
         },
