@@ -15,6 +15,7 @@ export default (config) => {
                     draggable: '.container, .container-fluid, [class|="col"]',
                     droppable: '[class|="col"]',
                     classes: ['row'],
+                    traits: [],
                 },
             },
             extendView: 'default',

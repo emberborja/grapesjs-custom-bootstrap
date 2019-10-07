@@ -1,6 +1,7 @@
 export default (editor, config) => {
     const blockId = config.constants.blocks.gridsystem.row.id;
     const { row, column } = config.constants.components.gridsystem;
+    const { heading, paragraph } = config.constants.components.typography;
     let row_block = {
         id: blockId,
         opts: {
@@ -11,14 +12,24 @@ export default (editor, config) => {
                 type: row.id,
                 components: {
                     type: column.id,
-                    components: [{
-                        tagName: 'p',
-                        type: 'text',
-                        components: [{
-                            type: 'textnode',
-                            content: 'col-xs-12'
-                        }]
-                    }]
+                    components: [
+                        {
+                            type: heading.id,
+                            components:
+                                {
+                                    type: 'textnode',
+                                    content: 'Rows - horizontal containers for columns'
+                                }
+                        },
+                        {
+                            type: paragraph.id,
+                            components: 
+                                {
+                                    type: 'textnode',
+                                    content: 'Change column traits in the traits tab. This is col-xs-12; put your content within columns.'
+                                }
+                        }
+                    ]
                 },
             }
         }

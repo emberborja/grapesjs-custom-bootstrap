@@ -11,7 +11,7 @@ export default (editor, config) => {
                 type: paragraph.id,
                     components: [{
                         type: 'textnode',
-                        content: 'This is a paragraoh; use the traits tab.',
+                        content: 'This is a paragraoh; use the traits tab to change its properties.',
                     }]
             }
         }

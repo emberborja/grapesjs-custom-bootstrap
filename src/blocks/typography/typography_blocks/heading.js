@@ -11,7 +11,7 @@ export default (editor, config) => {
                 type: heading.id,
                     components: [{
                         type: 'textnode',
-                        content: 'this is a heading, use traits tab',
+                        content: 'This is a heading; use traits tab to change its size.',
                     }]
             }
         }

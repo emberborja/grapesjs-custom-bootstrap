@@ -1,6 +1,7 @@
 export default (editor, config) => {
     const blockId = config.constants.blocks.gridsystem.column.id;
     const { column } = config.constants.components.gridsystem;
+    const { paragraph } = config.constants.components.typography;
     let column_block = {
         id: blockId,
         opts: {
@@ -10,11 +11,10 @@ export default (editor, config) => {
             content: {
                 type: column.id,
                 components: [{
-                    tagName: 'p',
-                    type: 'text',
+                    type: paragraph.id,
                     components: [{
                         type: 'textnode',
-                        content: 'this is a column, use settings tab',
+                        content: 'This is a column; use settings tab to change its width.',
                     }]
                 }],
             }
