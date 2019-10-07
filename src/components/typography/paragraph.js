@@ -11,15 +11,17 @@ export default (config) => {
             extend: 'text',
             model: {
                 defaults: {
-                    tagName: 'P',
+                    tagName: 'p',
                     name: 'Text',
                     draggable: '[class|="col"]',
-                    traits:[{
-                        type: 'select',
-                        label: 'Helper Classes',
-                        name: 'class',
-                        changeProp: 1,
-                        options: paragraphComponent.classes.map( bootstrap_class => { return {id: bootstrap_class, name: bootstrap_class} } )
+                    traits:[
+                        'id',
+                        'title',
+                        {
+                            type: 'select',
+                            label: 'Helper Classes',
+                            name: 'class',
+                            options: paragraphComponent.classes.map( bootstrap_class => { return {id: bootstrap_class, name: bootstrap_class} } )
                     }]
                 },
             },
