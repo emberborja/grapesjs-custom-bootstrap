@@ -1,6 +1,8 @@
 import { bootStrap3 } from './bootstrap3/bootstrap3';
 // TODO blockIds and componentIds lists in order to have an easy array to do a find on? when filtering for active modules?
 
+const contextClasses = ['active','success','warning','danger','info'];
+
 export const constants = {
 
     blocks: {
@@ -19,6 +21,11 @@ export const constants = {
             blockquote: { id: 'blockquote_block' },
             list: { id: 'list_block' },
             descriptionlist: { id: 'descriptionlist_block' },
+        },
+
+        tables: {
+            table: { id: 'table_block' },
+            table_responsive: { id: 'table_responsive_block' },
         },
 
     },
@@ -76,9 +83,48 @@ export const constants = {
                 id: 'descriptionlist_component',
                 tags: 'DL',
                 classes: ['dl-horizontal'],
-            }
+            },
 
         },
+
+        tables: {
+
+            table: {
+                id: 'table',
+                tags: 'TABLE',
+                classses: [
+                    'table', 
+                    'table-striped',
+                    'table-bordered',
+                    'table-hover',
+                    'table-condensed'
+                ],
+                wrapper: {
+                    tags: 'DIV',
+                    classes: ['table-responsive'],
+                },
+            },
+
+            tablehead: {
+                id: 'tablehead_component',
+                tags: 'TH',
+                classes: contextClasses,
+            },
+
+            tablerow: {
+                id: 'tablerow_component',
+                tags: 'TR',
+                classes: contextClasses,
+            },
+
+            tabledata: {
+                id: 'tabledata_component',
+                tags: 'TD',
+                classes: contextClasses,
+            },
+
+        },
+        
     },
 
 }

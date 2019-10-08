@@ -90,7 +90,14 @@ export const bootStrap3 = {
             tags: ['samp'],
         }
     },
-    tables: {},
+    tables: {
+        // .table .table-striped (like .btn .btn-primary ) 
+        tags: ['table', 'tbody'],
+        classes: ['table', 'table-striped', 'table-bordered', 'table-hover', 'table-condensed']
+        // can add contextual classes to row or cels [active, success, warning, danger, info]
+        // <tr class="active" ... ; <td class="success" ... (or th)
+        // wrap a table in a <div class="table-responsive"> to make the child table responsive
+    },
     forms: {},
     buttons: {
         // bs allows <a> and input, but i'm not going to use them for grapes
