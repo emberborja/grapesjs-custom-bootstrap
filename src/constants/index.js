@@ -27,6 +27,7 @@ export const constants = {
             table: { id: 'table_block' },
             table_responsive: { id: 'table_responsive_block' },
             tablehead: { id: 'tablehead_block' },
+            tablefoot: { id: 'tablefoot_block' },
             tablerow: { id: 'tablerow_block' },
             tabledata: { id: 'tabledata_block' },
         },
@@ -115,8 +116,8 @@ export const constants = {
             },
 
             tablefoot: {
-                id: 'tablehead_component',
-                tags: 'TFOOT',
+                id: 'tfoot',
+                tags: ['TFOOT','tfoot'],
             },
 
             tablerow: {
