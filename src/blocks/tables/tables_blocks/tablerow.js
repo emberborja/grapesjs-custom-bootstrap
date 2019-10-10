@@ -19,6 +19,14 @@ export default (editor, config) => {
                         type: tabledata.id,
                         content: 'data'
                     },
+                    {
+                        type: tabledata.id,
+                        content: 'data'
+                    },
+                    {
+                        type: tabledata.id,
+                        content: 'data'
+                    },
                 ]
             }
         }

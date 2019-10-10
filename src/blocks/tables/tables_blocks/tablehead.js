@@ -23,6 +23,16 @@ export default (editor, config) => {
                             tagName: 'th',
                             content: 'data'
                         },
+                        {
+                            type: tabledata.id,
+                            tagName: 'th',
+                            content: 'data'
+                        },
+                        {
+                            type: tabledata.id,
+                            tagName: 'th',
+                            content: 'data'
+                        },
                     ]
                 }
             }

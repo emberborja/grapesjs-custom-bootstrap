@@ -19,7 +19,7 @@ export default (config) => {
 
                 defaults: {
                     name: 'Table Data',
-                    draggable: ['tbody tr'],
+                    draggable: ['table tr'],
                     traits: [
                         'id',
                         'title',
