@@ -111,23 +111,15 @@ export const constants = {
             tablehead: {
                 id: 'tablehead_component',
                 tags: 'THEAD',
-                classes: contextClasses,
-            },
-
-            tablebody: {
-                id: 'tablebody_component',
-                tags: 'TBODY',
-                classes: contextClasses,
             },
 
             tablefoot: {
                 id: 'tablehead_component',
                 tags: 'TFOOT',
-                classes: contextClasses,
             },
 
             tablerow: {
-                id: 'tablerow_component',
+                id: 'row',
                 tags: 'TR',
                 classes: contextClasses,
             },
