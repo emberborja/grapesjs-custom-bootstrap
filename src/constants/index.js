@@ -26,6 +26,8 @@ export const constants = {
         tables: {
             table: { id: 'table_block' },
             table_responsive: { id: 'table_responsive_block' },
+            tabledata: { id: 'tabledata_block' },
+            tablehead_cell: { id: 'tablehead_cell_block' },
         },
 
     },
@@ -100,14 +102,27 @@ export const constants = {
                     'table-condensed'
                 ],
                 wrapper: {
+                    id: 'table_responsive_wrapper_component',
                     tags: 'DIV',
-                    classes: ['table-responsive'],
+                    classes: 'table-responsive',
                 },
             },
 
             tablehead: {
                 id: 'tablehead_component',
-                tags: 'TH',
+                tags: 'THEAD',
+                classes: contextClasses,
+            },
+
+            tablebody: {
+                id: 'tablebody_component',
+                tags: 'TBODY',
+                classes: contextClasses,
+            },
+
+            tablefoot: {
+                id: 'tablehead_component',
+                tags: 'TFOOT',
                 classes: contextClasses,
             },
 
@@ -118,8 +133,14 @@ export const constants = {
             },
 
             tabledata: {
-                id: 'tabledata_component',
+                id: 'cell',
                 tags: 'TD',
+                classes: contextClasses,
+            },
+            
+            tablehead_cell: {
+                id: 'tablehead_cell_component',
+                tags: 'TH',
                 classes: contextClasses,
             },
 

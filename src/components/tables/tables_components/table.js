@@ -5,7 +5,7 @@ export default (config) => {
     table.classes.forEach(element => props[element] = false );
 
     let table_component = {
-        type: 'table',
+        type: table.id,
         methods: {
             model: {
                 defaults: {

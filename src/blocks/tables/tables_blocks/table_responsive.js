@@ -1,14 +1,15 @@
 export default (editor, config) => {
     const blockId = config.constants.blocks.tables.table_responsive.id;
-    const { table_responsive } = config.constants.components.tables;
+    const { table } = config.constants.components.tables;
     let table_responsive_block = {
         id: blockId,
         opts: {
             label: 'Responsive Table',
             category: 'Tables',
             attributes: { class: "fa fa-table" },
-            content: 
-                `<div class="table-responsive">
+            content: {
+                type: table.wrapper.id,
+                components: `
                     <table class="table">
                         <thead>
                             <tr>
@@ -38,8 +39,9 @@ export default (editor, config) => {
                                 <td>@twitter</td>
                             </tr>
                         </tbody>
-                    </table>
-                </div>`
+                    </table>`
+            },
+                
         }
     }
     return table_responsive_block;
