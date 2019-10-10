@@ -26,6 +26,7 @@ export const constants = {
         tables: {
             table: { id: 'table_block' },
             table_responsive: { id: 'table_responsive_block' },
+            tablerow: { id: 'tablerow_block' },
             tabledata: { id: 'tabledata_block' },
             tablehead_cell: { id: 'tablehead_cell_block' },
         },
