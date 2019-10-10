@@ -11,7 +11,7 @@ export default (config) => {
                     if(el.tagName == 'TH' || el.tagName == 'th') {
                         result = {
                             type: tablehead_cell.id,
-                            tagName: tag.toLowerCase()
+                            // tagName: tag.toLowerCase()
                         };
                     }
                     return result;
@@ -20,7 +20,7 @@ export default (config) => {
                 defaults: {
                     name: 'Table Header',
                     type: tablehead_cell.id,
-                    tagName: 'th',
+                    tagName: 'TH',
                     draggable: ['thead tr'],
                     traits: [
                         'id',
@@ -30,6 +30,7 @@ export default (config) => {
                             label: 'Context Class',
                             name: 'class',
                             options: [
+                                { id: ' ', name: 'none' },
                                 ...tablehead_cell.classes.map(contextClass => ({
                                     id: contextClass, name: contextClass
                                 }))

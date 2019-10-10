@@ -28,6 +28,7 @@ export default (config) => {
                             label: 'Context Class',
                             name: 'class',
                             options: [
+                                { id: ' ', name: 'none' },
                                 ...tabledata.classes.map(contextClass => ({
                                     id: contextClass, name: contextClass
                                 }))
