@@ -92,8 +92,8 @@ export const constants = {
             table: {
                 id: 'table',
                 tags: 'TABLE',
-                classses: [
-                    'table', 
+                classes: [
+                    // 'table', 
                     'table-striped',
                     'table-bordered',
                     'table-hover',
