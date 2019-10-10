@@ -16,19 +16,23 @@ export default (editor, config) => {
                             type: 'row',
                             components: [
                                 { 
-                                    type: 'tablehead_cell_component',
+                                    type: 'cell',
+                                    tagName: 'th',
                                     content: '#'
                                 },
                                 { 
-                                    type: 'tablehead_cell_component',
+                                    type: 'cell',
+                                    tagName: 'th',
                                     components: 'First Name'
                                 },
                                 { 
-                                    type: 'tablehead_cell_component',
+                                    type: 'cell',
+                                    tagName: 'th',
                                     components: 'Last Name'
                                 },
                                 { 
-                                    type: 'tablehead_cell_component',
+                                    type: 'cell',
+                                    tagName: 'th',
                                     components: 'Username'
                                 },
                             ],

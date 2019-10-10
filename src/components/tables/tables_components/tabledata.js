@@ -25,6 +25,16 @@ export default (config) => {
                         'title',
                         {
                             type: 'select',
+                            label: 'Cell Type',
+                            name: 'tagName',
+                            changeProp: 1,
+                            options: [
+                                { id: 'th', name: 'table header' },
+                                { id: 'td', name: 'table data' }
+                            ]
+                        },
+                        {
+                            type: 'select',
                             label: 'Context Class',
                             name: 'class',
                             options: [

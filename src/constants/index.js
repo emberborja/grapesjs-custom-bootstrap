@@ -26,9 +26,9 @@ export const constants = {
         tables: {
             table: { id: 'table_block' },
             table_responsive: { id: 'table_responsive_block' },
+            tablehead: { id: 'tablehead_block' },
             tablerow: { id: 'tablerow_block' },
             tabledata: { id: 'tabledata_block' },
-            tablehead_cell: { id: 'tablehead_cell_block' },
         },
 
     },
@@ -110,8 +110,8 @@ export const constants = {
             },
 
             tablehead: {
-                id: 'tablehead_component',
-                tags: 'THEAD',
+                id: 'thead',
+                tags: ['THEAD', 'thead'],
             },
 
             tablefoot: {
@@ -128,12 +128,6 @@ export const constants = {
             tabledata: {
                 id: 'cell',
                 tags: 'TD',
-                classes: contextClasses,
-            },
-            
-            tablehead_cell: {
-                id: 'tablehead_cell_component',
-                tags: 'TH',
                 classes: contextClasses,
             },
 
