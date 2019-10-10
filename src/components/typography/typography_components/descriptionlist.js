@@ -12,7 +12,7 @@ export default (config) => {
             model: {
                 defaults: {
                     tagName: descriptionlistComponent.tags,
-                    name: 'description list',
+                    name: 'Description List',
                     draggable: '[class|="col"]',
                     traits:[
                         'id',
