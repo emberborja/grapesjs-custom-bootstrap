@@ -166,23 +166,45 @@ export const constants = {
                 tags: ['LABEL', 'label'],
                 // make col classes to use as reference here, spread the array
                 classes: ['col-*-*', 'control-label'],
-            },
-
-            // if needed, can use form-controls within div.row > div.col-*-* > {form control element}
-            form_control: {
-                id: 'form_control_component',
-                tags: ['INPUT', 'TEXTAREA', 'SELECT', 'input', 'textarea', 'select'],
-                classes: ['form-control', 'input-lg', 'input-sm'],
-                input_type_attribute_options: ['text', 'password', 'datetime', 'datetime-local', 'date', 'month', 'time', 'week', 'number', 'email', 'url', 'search', 'tel', 'color'],
-                textarea_rows: 2,
-                select_attributes: ['multiple'],
-                attributes: ['disabled', 'readonly', 'placeholder', 'type'],
-                // static form control is text next to a label, no interactivity but styled by bootstrap
+                // static form control is text next to a label, no interactivity; Styled by bootstrap
                 // wrap the <p> in a div and give it col class, give <p> class form-control-static
                 static_form_control: {
                     tags: ['div', 'p'],
                     classes: ['col-*-*', 'form-control-static']
                 }, 
+            },
+
+            // if needed, can use form-controls within div.row > div.col-*-* > {form control element}
+            form_control: {
+                classes: ['form-control', 'input-lg', 'input-sm'],
+                attributes: ['disabled', 'readonly'],
+                input: {
+                    id: 'form_control_input',
+                    tags: ['INPUT', 'input'],
+                    // ...classes
+                    attributes: {
+                        placeholder: 'placeholder text',
+                        types: ['text', 'password', 'datetime', 'datetime-local', 'date', 'month', 'time', 'week', 'number', 'email', 'url', 'search', 'tel', 'color'],
+                    },
+                },
+                textarea: {
+                    id: 'form_control_textarea',
+                    tags: ['TEXTAREA', 'textarea'],
+                    // ...classes
+                    attributes: { 
+                        placeholder: 'placeholder text',
+                        rows: 2,
+                    },
+                },
+                select: {
+                    id: 'form_control_select',
+                    tags: ['SELECT', 'select'],
+                    // ...classes
+                    attributes: {
+                        multiple: false,
+                    },
+                },
+                
             },
 
             form_radio_checkbox: {
