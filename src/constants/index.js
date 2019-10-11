@@ -32,6 +32,10 @@ export const constants = {
             tabledata: { id: 'tabledata_block' },
         },
 
+        forms: {
+            form: { id: 'form_block' },
+        },
+
     },
 
     components: {
@@ -134,6 +138,77 @@ export const constants = {
 
         },
         
+        forms: {
+
+            form: {
+                id: 'form_component',
+                tags: ['FORM', 'form'],
+                classes: ['form-inline', 'form-horizontal']
+            },
+
+            form_group: {
+                id: 'form_group_component',
+                tags: ['DIV', 'div'],
+                classes: ['.form-group', 'form-group-lg', 'form-group-sm'],
+                validation_state_classes: ['has-success', 'has-warning', 'has-error'],
+                // on <input class="form-control"> that are "textual", can give .has-feedback to dive .form-group
+                // will color an icon and position it correctly
+                feedback: {
+                    tags: ['div', 'span'],
+                    classes: ['has-feedback', 'form-control-feedback']
+                },
+                // add these sizing classes after using .form-group, like with buttons
+                form_horizontal_sizing_classes: ['form-group-lg', 'form-group-sm']
+            },
+
+            form_label: {
+                id: 'form_label_component', 
+                tags: ['LABEL', 'label'],
+                // make col classes to use as reference here, spread the array
+                classes: ['col-*-*', 'control-label'],
+            },
+
+            // if needed, can use form-controls within div.row > div.col-*-* > {form control element}
+            form_control: {
+                id: 'form_control_component',
+                tags: ['INPUT', 'TEXTAREA', 'SELECT', 'input', 'textarea', 'select'],
+                classes: ['form-control', 'input-lg', 'input-sm'],
+                input_type_attribute_options: ['text', 'password', 'datetime', 'datetime-local', 'date', 'month', 'time', 'week', 'number', 'email', 'url', 'search', 'tel', 'color'],
+                textarea_rows: 2,
+                select_attributes: ['multiple'],
+                attributes: ['disabled', 'readonly', 'placeholder', 'type'],
+                // static form control is text next to a label, no interactivity but styled by bootstrap
+                // wrap the <p> in a div and give it col class, give <p> class form-control-static
+                static_form_control: {
+                    tags: ['div', 'p'],
+                    classes: ['col-*-*', 'form-control-static']
+                }, 
+            },
+
+            form_radio_checkbox: {
+                id: 'form_radio_checkbox_component',
+                tags: ['DIV', 'LABEL', 'INPUT', 'div', 'label', 'input'],
+                classes: ['checkbox', 'radio', 'disabled'],
+                attributes: ['value', 'name', 'disabled', 'type'],
+                types: ['checkbox', 'radio'],
+                label_classes: ['checkbox-inline', 'radio-inline'],
+                // bootstrap example has div, label, input nested in label followed by text
+                // checkboxes value is optional
+                // radio buttons to work correctly should all share the same name attribute, then have a unique id and value
+                // to give validation state to these, wrap the <div class="checkbox"> with <div class="has-warning/(etc...)">
+            },
+
+            form_help_block: {
+                id: 'form_help_block_component',
+                tags: ['SPAN', 'span'],
+                classes: ['help-block'],
+                // match help block id to aria-describedby="{id}" on the form control it is describing, for screen readers
+            }, 
+
+            // input groups (will be nested within form-groups)
+
+        }
+
     },
 
 }
