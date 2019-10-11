@@ -1,5 +1,5 @@
 export default (config) => {
-    const { form } = config.constants.components.forms.form;
+    const { form } = config.constants.components.forms;
     let form_component = {
         type: form.id,
         methods: {
@@ -13,7 +13,10 @@ export default (config) => {
                     name: 'Form',
                     draggable: '[class|=col]',
                     droppable: true,
-                    traits:[{
+                    traits:[
+                        'id',
+                        'title',
+                        {
                         type: 'select',
                         label: 'Type',
                         name: 'class',

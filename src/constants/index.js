@@ -149,9 +149,9 @@ export const constants = {
             form_group: {
                 id: 'form_group_component',
                 tags: ['DIV', 'div'],
-                classes: ['.form-group', 'form-group-lg', 'form-group-sm'],
+                classes: ['form-group', 'form-group form-group-lg', 'form-group form-group-sm'],
                 validation_state_classes: ['has-success', 'has-warning', 'has-error'],
-                // on <input class="form-control"> that are "textual", can give .has-feedback to dive .form-group
+                // on <input class="form-control"> that are "textual", can give .has-feedback to div.form-group
                 // will color an icon and position it correctly
                 feedback: {
                     tags: ['div', 'span'],
