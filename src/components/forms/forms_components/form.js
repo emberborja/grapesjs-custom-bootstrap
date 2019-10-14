@@ -21,6 +21,7 @@ export default (config) => {
                         label: 'Type',
                         name: 'class',
                         options: [
+                            { id: ' ', name: 'Default' },
                             ...form.classes.map(formclass => ({ id: formclass, name: formclass }) )
                         ]
                     }]

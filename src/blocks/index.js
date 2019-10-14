@@ -1,6 +1,7 @@
 import grid_system from './grid_system/';
 import typography from './typography/';
 import tables from './tables';
+import forms from './forms';
 
 export default (editor, config) => {
   const bm = editor.BlockManager;
@@ -9,6 +10,7 @@ export default (editor, config) => {
     grid_system(editor, config),
     typography(editor, config),
     tables(editor, config),
+    forms(editor, config),
   ];
   allBlocks.forEach(addBlocks);
 }

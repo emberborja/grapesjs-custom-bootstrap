@@ -1,21 +1,20 @@
 export default (config) => {
     const { form_control } = config.constants.components.forms;
-    let form_control_input = {
-        type: form_control.input.id,
+    let form_control_textarea = {
+        type: form_control.textarea.id,
         methods: {
             isComponent: (el) => {
-                if (el && form_control.input.tags.includes(el.tagName)) {
-                    return { type: form_control.input.id }
+                if (el && form_control.textarea.tags.includes(el.tagName)) {
+                    return { type: form_control.textarea.id }
                 }
             },
             model: {
                 defaults: {
-                    name: 'Form-Input',
-                    draggable: '[class|=col], .form-group',
+                    name: 'Form-Textarea',
+                    draggable: '.form-group',
                     droppable: false,
                     attributes: {
                         palceholder: 'placeholder text',
-                        type: 'text',
                     },
                     classes: 'form-control',
                     traits:[
@@ -38,19 +37,11 @@ export default (config) => {
                                 { id: 'form-control input-sm', name: 'Small' },
                             ]
                         },
-                        {
-                            type: 'select',
-                            label: 'Input Type',
-                            name: 'type',
-                            options: [
-                                ...form_control.input.attributes.types.map(type => ({ id: type, name: type }))
-                            ]
-                        },
-                       
+                       // add number input for rows?   
                     ]
                 },
             },
         }
     }
-    return form_control_input;
+    return form_control_textarea;
 }

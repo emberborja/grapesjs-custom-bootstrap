@@ -4,7 +4,7 @@ export default (config) => {
         type: form_group.id,
         methods: {
             isComponent: (el) => {
-                if (el && (form.tags.includes(el.tagName) && el.classList.contains('form-group'))) {
+                if (el && (form_group.tags.includes(el.tagName) && el.classList.contains('form-group'))) {
                     return { type: form_group.id }
                 }
             },
@@ -36,6 +36,15 @@ export default (config) => {
                         
                     ]
                 },
+
+                updated(property, value, prevValue) {
+                    if(property != 'classes') return;
+                    console.log('property', property);
+                    console.log('value', value.models);
+                    console.log('prev value', prevValue);
+                    console.log(this.getClasses());
+                }
+
             },
         }
     }
