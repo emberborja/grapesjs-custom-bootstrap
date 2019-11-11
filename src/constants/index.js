@@ -7,10 +7,20 @@ export const constants = {
 
     blocks: {
 
+        basics: {
+            basic_link: {id: 'basic_link_block'},
+        },
+
         gridsystem: { 
             container: {id: 'container_block'},
             row: { id: 'row_block'},
             column: { id: 'column_block' },
+            column_3_9: { id: 'column_3_9_block' },
+            column_9_3: { id: 'column_9_3_block' },
+            column_4_8: { id: 'column_4_8_block' },
+            column_8_4: { id: 'column_8_4_block' },
+            column_3_6_3: { id: 'column_3_6_3_block' },
+            column_4_4_4: { id: 'column_4_4_4_block' },
         },
 
         typography: {
@@ -39,6 +49,10 @@ export const constants = {
     },
 
     components: {
+
+        basics: {
+            basic_link: {id: 'link'},
+        },
 
         gridsystem: { 
             container: {id: 'container_component'},
